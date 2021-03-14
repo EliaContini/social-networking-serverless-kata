@@ -1,0 +1,13 @@
+# package directories
+node_modules
+jspm_packages
+
+# Serverless directories
+.serverless
+
+# test and tap directories (Node Tap)
+.nyc_output
+test
+
+# vscode directories
+.vscode

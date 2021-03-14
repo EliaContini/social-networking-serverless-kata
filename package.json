@@ -1,0 +1,27 @@
+{
+  "name": "social-networking-serverless-kata",
+  "version": "1.0.0",
+  "description": "A serverless-based social networking application (similar to Twitter)",
+  "main": "server.js",
+  "scripts": {
+    "test": "clear; tap --reporter=list --watch"
+  },
+  "keywords": [
+    "aws",
+    "fastify",
+    "nodejs",
+    "sam",
+    "serverless"
+  ],
+  "author": "Elia Contini <https://elia.contini.page/>",
+  "license": "MIT",
+  "dependencies": {
+    "aws-lambda-fastify": "^1.4.4",
+    "dotenv": "^8.2.0",
+    "fastify": "^3.13.0",
+    "mongoose": "5.11.15"
+  },
+  "devDependencies": {
+    "tap": "^14.11.0"
+  }
+}
