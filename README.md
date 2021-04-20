@@ -1,3 +1,6 @@
+# This branch contains the first attempt to use AWS Lambda and Serverless Framework. It is not compliant with the AWS Lambda. Refers to the main branch for a compliant code.
+
+
 # Social Networking Serverless Kata
 
 This is a solution for the [Social Networking Serverless Kata](https://github.com/petecocoon/Social-Networking-Serverless-Kata).
