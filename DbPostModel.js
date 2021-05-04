@@ -1,11 +1,14 @@
 /**
- * @module PostModel
+ * @module DbPostModel
  *
  * @author Elia Contini <https://elia.contini.page/>
  *
  * @description MongoDB model for posts
  *
  */
+
+"use strict";
+
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 

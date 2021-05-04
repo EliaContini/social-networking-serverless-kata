@@ -2,11 +2,19 @@
 
 This is a solution for the [Social Networking Serverless Kata](https://github.com/petecocoon/Social-Networking-Serverless-Kata).
 
+## Notes regarding the differences with the first solution
+
+This is the review of the [first solution](https://github.com/EliaContini/social-networking-serverless-kata/tree/v1.0) that does not follow the design
+principles of AWS Lambda.
+
+Each endpoint must be a separate function.
+
+## Overview
+
 It is written in JavaScript/Node.js using these libraries:
 
--   [Fastify](https://www.fastify.io/)
--   [aws-lambda-fastify](https://github.com/fastify/aws-lambda-fastify/)
--   [Dotenv](https://github.com/motdotla/dotenv#readme)
+-   [MongoDB In-Memory Server](https://github.com/nodkz/mongodb-memory-server)
+-   [Mongoose](https://mongoosejs.com/)
 -   [Tap](https://node-tap.org/)
 
 and deployed on AWS Lambda using [Serverless](https://www.serverless.com/) Framework.
@@ -39,12 +47,13 @@ Install the last version of [Serverless framework](https://www.serverless.com/fr
 ### MongoDB Atlas
 
 You need a [MongoDB Atlas](https://www.mongodb.com/) account. [Setup a cluster](https://www.freecodecamp.org/news/get-started-with-mongodb-atlas/)
-that accepts connection from anywhere. Rename `sample.env` in `.env` and set
-your `MONGO_URI`.
+that accepts connection from anywhere. Rename `sample.serverless.json` in `serverless.json`
+and set your `MONGODB_URI`.
 
 ### AWS
 
-You need an AWS account. Create a IAM user and setup credentials for Serverless Framework following this [guide](https://www.serverless.com/framework/docs/providers/aws/guide/credentials#creating-aws-access-keys).
+You need an AWS account. Create a IAM user and setup credentials for Serverless
+Framework following this [guide](https://www.serverless.com/framework/docs/providers/aws/guide/credentials#creating-aws-access-keys).
 
 ### Install project dependecies
 

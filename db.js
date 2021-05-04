@@ -1,21 +1,27 @@
 /**
- * @module storage
+ * @module db
  *
  * @author Elia Contini <https://elia.contini.page/>
  *
- * @description Data layer
+ * @description Database module
  *
  */
-const mongoose = require("mongoose");
-const Post = require("./PostModel");
 
-const storage = (mongoUri) => {
+"use strict";
+
+const mongoose = require("mongoose");
+const Post = require("./DbPostModel");
+
+const db = (mongoUri) => {
     mongoose.connect(mongoUri, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     });
 
     return {
+        close: () => {
+            mongoose.connection.close();
+        },
         /**
          * Create a post
          *
@@ -70,8 +76,6 @@ const storage = (mongoUri) => {
 
                             break;
                         }
-                        default: {
-                        }
                     }
                 }
             }
@@ -93,4 +97,4 @@ const storage = (mongoUri) => {
     };
 };
 
-module.exports = storage;
+module.exports = db;
