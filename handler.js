@@ -1,25 +1,18 @@
-"use strict";
+'use strict';
 
-const awsLambdaFastify = require("aws-lambda-fastify");
-const server = require("./server");
+module.exports.hello = async (event) => {
+  return {
+    statusCode: 200,
+    body: JSON.stringify(
+      {
+        message: 'Go Serverless v1.0! Your function executed successfully!',
+        input: event,
+      },
+      null,
+      2
+    ),
+  };
 
-const proxy = awsLambdaFastify(server);
-
-//exports.app = proxy;
-
-exports.app = (event, context) => {
-    //
-    // executing
-    //
-    //      $ serverless invoke -f app -l
-    //
-    // I got the error "Task timed out after 6.01 seconds"
-    //
-    // https://forum.serverless.com/t/task-timed-out-after-6-00-seconds/728
-    //
-    // https://docs.aws.amazon.com/lambda/latest/dg/nodejs-context.html
-    //
-    context.callbackWaitsForEmptyEventLoop = false;
-
-    return proxy(event, context);
+  // Use this code if you don't use the http event with the LAMBDA-PROXY integration
+  // return { message: 'Go Serverless v1.0! Your function executed successfully!', event };
 };
