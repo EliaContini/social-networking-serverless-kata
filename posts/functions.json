@@ -1,42 +1,42 @@
 {
-    "create": {
-        "handler": "./posts/handler.create",
-        "events": [
-            {
-                "http": {
-                    "method": "post",
-                    "path": "posts"
-                }
+   "create": {
+      "handler": "./posts/handler.create",
+      "events": [
+         {
+            "http": {
+               "method": "post",
+               "path": "posts"
             }
-        ]
-    },
-    "delete": {
-        "handler": "./posts/handler.delete",
-        "events": [
-            {
-                "http": {
-                    "method": "delete",
-                    "path": "posts/{id}"
-                }
+         }
+      ]
+   },
+   "delete": {
+      "handler": "./posts/handler.delete",
+      "events": [
+         {
+            "http": {
+               "method": "delete",
+               "path": "posts/{id}"
             }
-        ]
-    },
-    "read": {
-        "handler": "./posts/handler.get",
-        "events": [
-            {
-                "http": {
-                    "method": "get",
-                    "path": "posts",
-                    "request": {
-                        "parameters": {
-                            "querystrings": {
-                                "username": true
-                            }
-                        }
-                    }
-                }
+         }
+      ]
+   },
+   "read": {
+      "handler": "./posts/handler.get",
+      "events": [
+         {
+            "http": {
+               "method": "get",
+               "path": "posts",
+               "request": {
+                  "parameters": {
+                     "querystrings": {
+                        "username": true
+                     }
+                  }
+               }
             }
-        ]
-    }
+         }
+      ]
+   }
 }

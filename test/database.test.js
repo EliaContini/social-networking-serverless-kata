@@ -1,5 +1,5 @@
 /**
- * @module db.test
+ * @module database.test
  *
  * @author Elia Contini <https://elia.contini.page/>
  *
@@ -11,7 +11,7 @@ const mongoose = require("mongoose");
 const { MongoMemoryServer } = require("mongodb-memory-server");
 const { test } = require("tap");
 
-const dbConnector = require("./../db");
+const database = require("./../database");
 
 const mongoServer = new MongoMemoryServer();
 mongoose.Promise = Promise;
@@ -37,7 +37,7 @@ const posts = [
 
 test("", async (t) => {
     return mongoServer.getUri().then(async (mongoUri) => {
-        const db = dbConnector(mongoUri);
+        const db = database(mongoUri);
 
         const populateDb = async () => {
             for (let i = 0; i < posts.length; i++) {
@@ -114,7 +114,7 @@ test("", async (t) => {
             t.same(removed._id, responseCreate._id, "returns the removed post");
         });
 
-        t.tearDown(async () => {
+        t.teardown(async () => {
             db.close();
 
             mongoServer.stop();

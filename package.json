@@ -1,23 +1,23 @@
 {
-  "name": "social-networking-serverless-kata",
-  "version": "1.0.0",
-  "description": "A serverless-based social networking application (similar to Twitter)",
-  "scripts": {
-    "test": "clear; tap --reporter=list --watch"
-  },
-  "keywords": [
-    "aws",
-    "lambda",
-    "mongodb",
-    "serverless"
-  ],
-  "author": "Elia Contini <https://elia.contini.page/>",
-  "license": "MIT",
-  "dependencies": {
-    "mongoose": "5.11.15"
-  },
-  "devDependencies": {
-    "mongodb-memory-server": "^6.9.6",
-    "tap": "^14.11.0"
-  }
+   "name": "social-networking-serverless-kata",
+   "version": "1.0.0",
+   "description": "A serverless-based social networking application (similar to Twitter)",
+   "scripts": {
+      "test": "clear; tap --reporter=list --watch"
+   },
+   "keywords": [
+      "aws",
+      "lambda",
+      "mongodb",
+      "serverless"
+   ],
+   "author": "Elia Contini <https://elia.contini.page/>",
+   "license": "MIT",
+   "dependencies": {
+      "mongoose": "^5.12.10"
+   },
+   "devDependencies": {
+      "mongodb-memory-server": "^6.9.6",
+      "tap": "^15.0.9"
+   }
 }
